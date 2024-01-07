@@ -1,0 +1,172 @@
+.App {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffffff;
+
+    .heading {
+        font-weight: 800;
+        margin-bottom: 70px;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 30px;
+        font-family: 'Raleway', sans-serif;
+
+
+        .budget {
+            width: 300px;
+            height: 120px;
+            border-radius: 20px;
+            box-shadow: 4px 3px 37px 0px rgba(0, 0, 0, 0.24);
+            background: #97cadb;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 30px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+
+            .budget-input {
+                padding: 4px 18px;
+                border: 1px solid #000;
+                border-radius: 13px;
+            }
+
+            .budget-button {
+                margin-right: 30px;
+                border: none;
+                outline: none;
+                background: #fff;
+                padding: 8px 20px;
+                border-radius: 12px;
+            }
+        }
+
+        .remaining {
+            width: 300px;
+            height: 120px;
+            border-radius: 20px;
+            box-shadow: 4px 3px 37px 0px rgba(0, 0, 0, 0.24);
+            background: #fff;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .expensetotal {
+            width: 300px;
+            height: 120px;
+            border-radius: 20px;
+            box-shadow: 4px 3px 37px 0px rgba(0, 0, 0, 0.24);
+            background: #001b48;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+
+    .expense-list {
+        margin-top: 70px;
+        // overflow: scroll;
+        // height: 400px;
+
+        .expense-item {
+            font-family: 'Raleway', sans-serif;
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 20px;
+            margin-top: 20px;
+            background-color: #eeeeee;
+            border-radius: 20px;
+            font-weight: 500;
+
+            .right {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                img {
+                    height: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+    }
+
+    .add-expense-section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 30px;
+
+        .expense-form {
+            text-align: center;
+
+            form {
+                input {
+                    margin: 0px 20px;
+                    padding: 10px 20px;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid black;
+                    background-color: transparent;
+
+                    &::placeholder {
+                        color: #000;
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                        border-bottom: 1px solid #568ce9;
+                        font-family: 'Raleway', sans-serif;
+                        font-size: 16px;
+                    }
+
+                }
+
+                .button-submit {
+                    button {
+                        margin-top: 20px;
+                        padding: 12px 25px;
+                        font-size: 16px;
+                        font-family: 'Raleway', sans-serif;
+                        border-radius: 20px;
+                        outline: none;
+                        border: none;
+                        color: #fff;
+                        background: #001b48;
+                        cursor: pointer;
+                        transition: 0.4s;
+
+                        &:hover {
+                            background-color: #97cadb;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

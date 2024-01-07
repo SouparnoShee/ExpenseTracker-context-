@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Budget from "./components/budget";
+import ExpenseForm from "./components/expenseform";
+import ExpenseList from "./components/expenselist";
+import ExpenseTotal from "./components/expensetotal";
+import Remaining from "./components/remaining";
+import { AppProvider } from "./context/AppContext";
+import "./sass/styles.scss"
+
+
+// TODO: Insert the Context API inside the expense project , Learn and apply as well as take notes
+
+// * Adding budget onclick functinality
+// * Adding all the data to local storage
+// * Write and note the imp concepts
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <AppProvider>
+      <div className="App">
+
+        <h1 className="heading">Welcome to my budget app</h1>
+        <div className="header">
+
+          <Budget />
+          <Remaining />
+          <ExpenseTotal />
+        </div>
+        <div className="expenselist-wrapper">
+          <ExpenseList />
+        </div>
+        <div className="add-expense-section">
+          <h1>Add Expenses</h1>
+          <div className="expense-form">
+            <ExpenseForm />
+          </div>
+        </div>
+      </div>
+    </AppProvider>
   );
 }
 
